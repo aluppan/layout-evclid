@@ -1,0 +1,83 @@
+@mixin form-text {
+    color: $bgn-grey-color;
+    background: $bgn-form-color;
+    border-radius: 16px;
+    padding: 14px 24px;
+    border: none;
+    width: 570px;
+}
+
+@mixin card-block {
+    background-position: left 60px top 50%;
+    background-color: $bgn-white-color;
+    border: 1px solid $bgn-grey-color;
+    padding: 64px 115px 64px 300px;
+}
+
+@mixin card-block-1366 {
+    background-position: top 50px left 30%;
+    padding: 235px 50px 50px 50px;
+}
+
+@mixin card-block-1024 {
+    background-position: left 77px top 50%;
+    padding: 64px 155px 64px 315px;
+}
+
+@mixin card-block-992 {
+    background-position: left 40px top 50%;
+    background-size: 114px 99px;
+    padding: 34px 45px 34px 170px;
+}
+
+@mixin card-block-576 {
+    background-position: top left;
+    background-size: 64px 49px;
+    padding: 0;
+    padding-top: 61px;
+    border: none;
+    border-radius: 0;
+}
+
+//breakpoints
+@mixin xl-1366 {
+    @media (max-width: (1366px)) {
+        @content;
+    }
+}
+
+@mixin lg-1024 {
+    @media (max-width: (1024px)) {
+        @content;
+    }
+}
+
+@mixin lg-992 {
+    @media (max-width: (992px)) {
+        @content;
+    }
+}
+
+@mixin md-768 {
+    @media (max-width: (768px)) {
+        @content;
+    }
+}
+
+@mixin sm-670 {
+    @media (max-width: (670px)) {
+        @content;
+    }
+}
+
+@mixin xs-576 {
+    @media (max-width: (576px)) {
+        @content;
+    }
+}
+
+@mixin xs-320 {
+    @media (max-width: (320px)) {
+        @content;
+    }
+}
