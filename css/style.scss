@@ -180,10 +180,6 @@ p {
     &__nav {
         display: flex;
 
-        // @include lg-1024 {
-        //     display: none
-        // }
-
         &-list {
             display: flex;
             align-items: center;
@@ -244,8 +240,6 @@ p {
     }
 
     &__burger-nav {
-        // display: none;
-
         @include lg-1024 {
             display: block;
             position: absolute;
@@ -637,78 +631,43 @@ p {
 
     &__card-block-1 {
         background: url('../img/about-us/block-2.svg') no-repeat left center;
-        // background-position: left 60px top 50%;
-        // background-color: $bgn-white-color;
-        // border: 1px solid $bgn-grey-color;
-        // padding: 64px 115px 64px 300px;
         @include card-block;
         margin-bottom: 32px;
 
         @include xl-1366 {
-            // background-position: top 50px left 30%;
-            // padding: 235px 50px 50px 50px;
             @include card-block-1366;
         }
 
         @include lg-1024 {
-            // background-position: left 77px top 50%;
-            // padding: 64px 155px 64px 315px;
             @include card-block-1024;
         }
 
         @include lg-992 {
-            // background-position: left 40px top 50%;
-            // background-size: 114px 99px;
-            // padding: 34px 44px 34px 170px;
             @include card-block-992;
         }
 
         @include xs-576 {
-            // background-position: top left;
-            // background-size: 64px 49px;
-            // padding: 0;
-            // padding-top: 61px;
-            // border: none;
-            // border-radius: 0;
             @include card-block-576;
         }
     }
 
     &__card-block-2 {
         background: url('../img/about-us/block-3.svg') no-repeat left center;
-        // background-position: left 60px top 50%;
-        // background-color: $bgn-white-color;
-        // border: 1px solid $bgn-grey-color;
-        // // padding: 65px 120px 65px 300px;
-        // padding: 64px 115px 64px 300px;
         @include card-block;
 
         @include xl-1366 {
-            // background-position: top 50px left 30%;
-            // padding: 235px 50px 50px 50px;
             @include card-block-1366;
         }
 
         @include lg-1024 {
-            // background-position: left 77px top 50%;
-            // padding: 64px 155px 64px 315px;
             @include card-block-1024;
         }
 
         @include lg-992 {
-            // background-position: left 40px top 50%;
-            // background-size: 114px 99px;
-            // padding: 34px 45px 34px 170px;
             @include card-block-992;
         }
 
         @include xs-576 {
-            // background-position: top left;
-            // background-size: 64px 49px;
-            // padding: 0;
-            // padding-top: 61px;
-            // border: none;
-            // border-radius: 0;
             @include card-block-576;
         }
     }
