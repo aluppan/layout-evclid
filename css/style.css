@@ -188,11 +188,13 @@ p {
 }
 .header__logo {
   max-height: 72px;
+  margin-right: auto;
 }
 @media (max-width: 1024px) {
   .header__logo {
     max-width: 150px;
     max-height: 48px;
+    margin-right: 0;
   }
 }
 @media (max-width: 576px) {
@@ -210,7 +212,8 @@ p {
 }
 @media (max-width: 1024px) {
   .header__nav-list {
-    display: none;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .header__nav-item:not(:last-child) {
@@ -221,11 +224,22 @@ p {
     margin-right: 55px;
   }
 }
+@media (max-width: 1024px) {
+  .header__nav-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .header__nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
 .header__nav-link {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: #000;
   transition: border-bottom 0.1s ease-out, color 0.3s ease;
 }
 .header__nav-link:hover {
@@ -234,6 +248,58 @@ p {
 .header__nav-link:active {
   border-bottom: 2px solid #e1670e;
   color: #e1670e;
+}
+@media (max-width: 1024px) {
+  .header__nav-link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333;
+  }
+}
+@media (max-width: 576px) {
+  .header__nav-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .header__burger-nav {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 420px;
+    height: 808px;
+    padding-top: 38px;
+    padding-left: 50px;
+    left: 0px;
+    top: 0px;
+    background: #fff;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 32px 32px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-101%);
+  }
+}
+@media (max-width: 768px) {
+  .header__burger-nav {
+    width: 420px;
+    height: 771px;
+    padding-top: 23px;
+    border-radius: 0px 0px 24px 24px;
+  }
+}
+@media (max-width: 576px) {
+  .header__burger-nav {
+    width: 320px;
+    height: 407px;
+    padding-left: 15px;
+    border-radius: 0px 0px 16px 16px;
+  }
+}
+.header__burger-nav--active {
+  transform: none;
 }
 .header__burger {
   border: none;
@@ -248,13 +314,35 @@ p {
 }
 .header__burger-icon rect, .header__burger-icon path {
   transition: fill 0.1s ease-in-out;
-  transition: stroke 0.1s ease-in-out;
 }
-.header__burger-icon:hover rect, .header__burger-icon:active rect {
+.header__burger-icon:hover rect {
   fill: #ff9900;
 }
-.header__burger-icon:hover path, .header__burger-icon:active path {
-  stroke: #ff9900;
+.header__burger-icon:active rect {
+  fill: #e1670e;
+}
+.header__burger-icon:hover path {
+  fill: #ff9900;
+}
+.header__burger-icon:active path {
+  fill: #e1670e;
+}
+.header__burger-close {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 105px;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header__burger-close {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .header__burger-close {
+    margin-bottom: 32px;
+  }
 }
 .header__search {
   margin-left: 260px;
@@ -702,7 +790,15 @@ p {
     margin-bottom: 16px;
   }
 }
-.how-working__step-title {
+.how-working__step-title:not(:last-child) {
+  margin-right: 85px;
+}
+@media (max-width: 576px) {
+  .how-working__step-title:not(:last-child) {
+    margin-right: 44px;
+  }
+}
+.how-working__step-button {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -713,28 +809,26 @@ p {
   padding: 0;
   transition: color 0.3s ease;
 }
-.how-working__step-title:not(:last-child) {
-  margin-right: 85px;
-}
 @media (max-width: 576px) {
-  .how-working__step-title:not(:last-child) {
-    margin-right: 44px;
-  }
-}
-@media (max-width: 576px) {
-  .how-working__step-title {
+  .how-working__step-button {
     font-size: 14px;
     line-height: 17px;
   }
 }
-.how-working__step-title:hover {
+.how-working__step-button:hover {
   color: #ff9900;
 }
-.how-working__step-title:active {
+.how-working__step-button:active {
   color: #e1670e;
 }
-.how-working__step-title--active {
+.how-working__step-button--active {
   color: #e1670e;
+}
+.how-working__content {
+  display: none;
+}
+.how-working__content--active {
+  display: block;
 }
 .how-working__block {
   display: flex;
@@ -774,6 +868,7 @@ p {
     max-width: 100%;
     max-height: 284px;
     margin-bottom: 38px;
+    border-radius: 24px;
   }
 }
 @media (max-width: 576px) {

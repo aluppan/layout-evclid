@@ -163,10 +163,12 @@ p {
 
     &__logo {
         max-height: 72px;
+        margin-right: auto;
 
         @include lg-1024 {
             max-width: 150px;
             max-height: 48px;
+            margin-right: 0;
         }
 
         @include xs-576 {
@@ -178,12 +180,17 @@ p {
     &__nav {
         display: flex;
 
+        // @include lg-1024 {
+        //     display: none
+        // }
+
         &-list {
             display: flex;
             align-items: center;
 
             @include lg-1024 {
-                display: none
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
@@ -193,13 +200,22 @@ p {
             @include xl-1366 {
                 margin-right: 55px;
             }
+
+            @include lg-1024 {
+                margin-right: 0;
+                margin-bottom: 60px;
+            }
+
+            @include xs-576 {
+                margin-bottom: 32px;
+            }
         }
 
         &-link {
             font-weight: 600;
             font-size: 18px;
             line-height: 22px;
-            color: #000000;
+            color: $txt-black-color;
             transition: border-bottom 0.1s ease-out, color 0.3s ease;
 
             &:hover {
@@ -210,7 +226,61 @@ p {
                 border-bottom: 2px solid $bgn-active-color;
                 color: $bgn-active-color;
             }
+
+            @include lg-1024 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: $burger-menu-color;
+            }
+
+            @include xs-576 {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                // color: #333333;
+            }
         }
+    }
+
+    &__burger-nav {
+        // display: none;
+
+        @include lg-1024 {
+            display: block;
+            position: absolute;
+            z-index: 10;
+            width: 420px;
+            height: 808px;
+            // height: 100vh;
+            padding-top: 38px;
+            padding-left: 50px;
+            left: 0px;
+            top: 0px;
+            background: $bgn-white-color;
+            box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 0px 0px 32px 32px;
+            transition: transform .3s ease-in-out;
+            transform: translateX(-101%);
+        }
+
+        @include md-768 {
+            width: 420px;
+            height: 771px;
+            padding-top: 23px;
+            border-radius: 0px 0px 24px 24px;
+        }
+
+        @include xs-576 {
+            width: 320px;
+            height: 407px;
+            padding-left: 15px;
+            border-radius: 0px 0px 16px 16px;
+        }
+    }
+
+    &__burger-nav--active {
+        transform: none;
     }
 
     &__burger {
@@ -226,18 +296,40 @@ p {
         &-icon rect,
         &-icon path {
             transition: fill 0.1s ease-in-out;
-            transition: stroke 0.1s ease-in-out;
         }
 
-        &-icon:hover rect,
-        &-icon:active rect {
+        &-icon:hover rect {
             fill: $bgn-button-color;
         }
 
-        &-icon:hover path,
-        &-icon:active path {
-            stroke: $bgn-button-color;
+        &-icon:active rect {
+            fill: $bgn-active-color;
         }
+
+        &-icon:hover path {
+            fill: $bgn-button-color;
+        }
+
+        &-icon:active path {
+            fill: $bgn-active-color;
+        }
+    }
+
+    &__burger-close {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 105px;
+        display: none;
+
+        @include lg-1024 {
+            display: block;
+        }
+
+        @include xs-576 {
+            margin-bottom: 32px;
+        }
+
     }
 
     &__search {
@@ -686,6 +778,16 @@ p {
         }
 
         &-title {
+            &:not(:last-child) {
+                margin-right: 85px;
+
+                @include xs-576 {
+                    margin-right: 44px;
+                }
+            }
+        }
+
+        &-button {
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
@@ -695,14 +797,6 @@ p {
             background-color: transparent;
             padding: 0;
             transition: color 0.3s ease;
-
-            &:not(:last-child) {
-                margin-right: 85px;
-
-                @include xs-576 {
-                    margin-right: 44px;
-                }
-            }
 
             @include xs-576 {
                 font-size: 14px;
@@ -718,9 +812,17 @@ p {
             }
         }
 
-        &-title--active {
+        &-button--active {
             color: $bgn-active-color;
         }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content--active {
+        display: block;
     }
 
     &__block {
@@ -757,6 +859,7 @@ p {
                 max-width: 100%;
                 max-height: 284px;
                 margin-bottom: 38px;
+                border-radius: 24px;
             }
 
             @include xs-576 {
@@ -983,7 +1086,7 @@ p {
 
         @include xs-576 {
             margin-bottom: 16px;
-            border-bottom: 1px solid #414141;
+            border-bottom: 1px solid $bgn-form-color;
             padding-bottom: 16px;
         }
 
