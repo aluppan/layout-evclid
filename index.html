@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -66,7 +67,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="container">
                 <div class="hero__banner">
                     <div class="hero__slide hero__slide--1">
@@ -79,7 +80,51 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <section class="hero">
+            <div class="container swiper-cont">
+                <div class="swiper">
+                    <div class="hero__slide hero__slide--text">
+                        <h1 class="hero__title">Проектные решения любой сложности</h1>
+                        <p class="hero__desc subtitle">
+                            Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
+                            уделом проектантов
+                        </p>
+                        <button class="hero__button button">Заказать расчёт</button>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero__slide--1"></div>
+                        <div class="swiper-slide hero__slide--2"></div>
+                        <div class="swiper-slide hero__slide--3"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+            </div>
         </section>
+
+        <!-- <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero__slide--1"><img src="/img/hero/slide-1.jpg" alt=""></div>
+                <div class="swiper-slide hero__slide--2"><img src="/img/hero/slide-1.jpg" alt=""></div>
+                <div class="swiper-slide hero__slide--3"><img src="/img/hero/slide-1.jpg" alt=""></div>
+                ...
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+            <div class="swiper-scrollbar"></div>
+        </div> -->
 
         <section class="about-us">
             <div class="container">
@@ -339,6 +384,8 @@
     </footer>
     <script src="js/step.js"></script>
     <script src="js/burger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
