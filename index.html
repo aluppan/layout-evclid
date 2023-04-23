@@ -6,16 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Евклид</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <!-- слайдер -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- jqury-accordion -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!-- style -->
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
     <header class="header">
         <div class="container header__container">
-            <button class="header__burger">
+            <button class="header__burger" aria-label="Открыть меню">
                 <svg class="header__burger-icon" width="30" height="23" viewBox="0 0 30 23" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="30" height="3" fill="black" />
@@ -24,10 +29,10 @@
                 </svg>
             </button>
             <a class="header__logo" href="">
-                <img class="header__logo-img" src="../img/header/logo.svg" alt="logo">
+                <img class="header__logo-img" src="../img/header/logo.svg" alt="Логотип">
             </a>
             <nav class="header__nav header__burger-nav" id="burger-nav">
-                <button class="header__burger-close">
+                <button class="header__burger-close" aria-label="Закрыть меню">
                     <svg class="header__burger-icon" width="23" height="24" viewBox="0 0 23 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
@@ -53,7 +58,7 @@
                     </li>
                 </ul>
             </nav>
-            <button class="header__search">
+            <button class="header__search" aria-label="Найти">
                 <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="7.56126" height="1.89031"
@@ -67,25 +72,10 @@
     </header>
 
     <main>
-        <!-- <section class="hero">
-            <div class="container">
-                <div class="hero__banner">
-                    <div class="hero__slide hero__slide--1">
-                        <h1 class="hero__title">Проектные решения любой сложности</h1>
-                        <p class="hero__desc subtitle">
-                            Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
-                            уделом проектантов
-                        </p>
-                        <button class="hero__button button">Заказать расчёт</button>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <section class="hero">
-            <div class="container swiper-cont">
+            <div class="container">
                 <div class="swiper">
-                    <div class="hero__slide hero__slide--text">
+                    <div class="hero__slide">
                         <h1 class="hero__title">Проектные решения любой сложности</h1>
                         <p class="hero__desc subtitle">
                             Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
@@ -99,32 +89,9 @@
                         <div class="swiper-slide hero__slide--3"></div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
-                    <!-- <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
-                    <!-- If we need scrollbar -->
-                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </div>
         </section>
-
-        <!-- <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide hero__slide--1"><img src="/img/hero/slide-1.jpg" alt=""></div>
-                <div class="swiper-slide hero__slide--2"><img src="/img/hero/slide-1.jpg" alt=""></div>
-                <div class="swiper-slide hero__slide--3"><img src="/img/hero/slide-1.jpg" alt=""></div>
-                ...
-            </div>
-
-            <div class="swiper-pagination"></div>
-
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-
-            <div class="swiper-scrollbar"></div>
-        </div> -->
 
         <section class="about-us">
             <div class="container">
@@ -176,17 +143,20 @@
                 <h2 class="how-working__title title">Как мы работаем</h2>
                 <ul class="how-working__step">
                     <li class="how-working__step-title">
-                        <button class="how-working__step-button how-working__step-button--active"
-                            data-path="step1">1 шаг</button>
+                        <button class="how-working__step-button how-working__step-button--active" data-path="step1"
+                            aria-label="Шаг первый">1 шаг</button>
                     </li>
                     <li class="how-working__step-title">
-                        <button class="how-working__step-button" data-path="step2">2 шаг</button>
+                        <button class="how-working__step-button" data-path="step2"
+                            aria-label="Шаг второй">2 шаг</button>
                     </li>
                     <li class="how-working__step-title">
-                        <button class="how-working__step-button" data-path="step3">3 шаг</button>
+                        <button class="how-working__step-button" data-path="step3"
+                            aria-label="Шаг третий">3 шаг</button>
                     </li>
                     <li class="how-working__step-title">
-                        <button class="how-working__step-button" data-path="step4">4 шаг</button>
+                        <button class="how-working__step-button" data-path="step4"
+                            aria-label="Шаг четвертый">4 шаг</button>
                     </li>
                 </ul>
                 <div class="how-working__content how-working__content--active" data-target="step1">
@@ -279,30 +249,140 @@
         <section class="faq">
             <div class="container">
                 <h2 class="faq__title title">Часто задаваемые вопросы</h2>
-                <hr class="faq__hr">
-                <h3 class="faq__subtitle subtitle">
-                    Из чего формируется конечная стоимость проекта?
-                    <span class="faq__icon"></span>
-                </h3>
-                <hr class="faq__hr">
-                <h3 class="faq__subtitle subtitle">
-                    У меня есть свой проект. Сможем ли мы его доработать /
-                    реализовать?
-                </h3>
-                <hr class="faq__hr">
-                <h3 class="faq__subtitle subtitle">
-                    Я выбираю между разными компаниями. В чём ваше отличие?
-                </h3>
-                <hr class="faq__hr">
-                <h3 class="faq__subtitle subtitle">
-                    Могу ли я делегировать вам работу / согласование с подрядчиком /
-                    организацией?
-                </h3>
-                <hr class="faq__hr">
-                <h3 class="faq__subtitle subtitle">
-                    Могу ли я вернуть деньги на каком-либо из этапов работ?
-                </h3>
-                <hr class="faq__hr">
+                <div class="faq__accordion" id="accordion">
+                    <h3>
+                        <span class="faq__subtitle">Из чего формируется конечная стоимость проекта?</span>
+                    </h3>
+                    <div>
+                        <p class="faq__text text">
+                            Являясь всего лишь частью общей картины, непосредственные участники технического прогресса
+                            призывают
+                            нас 
+                            к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                            Но высококачественный прототип будущего проекта является качественно новой ступенью
+                            первоочередных
+                            требований. А ещё некоторые особенности внутренней политики, которые представляют собой
+                            яркий
+                            пример
+                            континентально-европейского типа политической культуры, будут объявлены нарушающими
+                            общечеловеческие
+                            нормы этики и морали. И нет сомнений, что явные признаки победы институционализации
+                            призывают
+                            нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                            ключевых факторов.
+                        </p>
+                        <p class="faq__text text">
+                            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть
+                            призваны
+                            к ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                            слоёв
+                            населения,
+                            а значит, должны быть объединены в целые кластеры себе подобных. Банальные,
+                            но неопровержимые
+                            выводы,
+                            а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
+                            должны
+                            быть представлены в исключительно положительном свете.
+                        </p>
+                    </div>
+                    <h3>
+                        <span class="faq__subtitle">У меня есть свой проект. Сможем ли мы его доработать /
+                            реализовать?</span>
+                    </h3>
+                    <div>
+                        <p class="faq__text text">
+                            Вы&nbsp;разрабатываете проект и&nbsp;хотите узнать, возможно&nbsp;ли его доработать или
+                            реализовать в&nbsp;полном объеме. Наша команда профессионалов готова помочь вам в&nbsp;этом
+                            вопросе.
+                            Мы&nbsp;имеем богатый опыт в&nbsp;разработке и&nbsp;реализации проектов различной сложности.
+                            Наша команда состоит из&nbsp;специалистов в&nbsp;области программирования, дизайна,
+                            маркетинга и&nbsp;менеджмента проектов. Мы&nbsp;готовы предоставить вам полный спектр услуг,
+                            начиная от&nbsp;анализа текущего состояния вашего проекта и&nbsp;заканчивая доработкой
+                            и&nbsp;запуском в&nbsp;продакшн. Мы&nbsp;осуществляем работу в&nbsp;сжатые сроки
+                            и&nbsp;с&nbsp;высоким качеством.
+                        </p>
+                        <p class="faq__text text">
+                            Ваш проект будет разработан и&nbsp;реализован с&nbsp;учетом
+                            всех ваших требований и&nbsp;пожеланий. Мы&nbsp;готовы предоставить вам полную техническую
+                            поддержку после запуска проекта, чтобы обеспечить его стабильную работу и&nbsp;эффективное
+                            использование. Если у&nbsp;вас есть проект и&nbsp;вы&nbsp;хотите его доработать или
+                            реализовать,
+                            обращайтесь к&nbsp;нам. Мы&nbsp;готовы обсудить детали и&nbsp;предложить оптимальное решение
+                            для вашего бизнеса.
+                        </p>
+                    </div>
+                    <h3>
+                        <span class="faq__subtitle">Я выбираю между разными компаниями. В чём ваше
+                            отличие?</span>
+                    </h3>
+                    <div>
+                        <p class="faq__text text">
+                            Когда приходится выбирать между разными компаниями, важно понимать, в&nbsp;чем заключается
+                            их&nbsp;отличие. Конечно, все компании будут говорить о&nbsp;своих преимуществах,
+                            но&nbsp;как определить, какая из&nbsp;них наиболее подходит именно вам? Если речь идет
+                            о&nbsp;бизнесе, то, вероятно, главным критерием является цена и&nbsp;качество услуг. Однако,
+                            кроме этого, стоит обратить внимание на&nbsp;репутацию компании и&nbsp;отзывы клиентов.
+                            Надежность и&nbsp;ответственность&nbsp;&mdash; тоже важные качества. Кроме того, многие
+                            компании стараются выделиться на&nbsp;рынке именно благодаря дополнительным услугам
+                            и&nbsp;сервисам. Например, предоставление дополнительных скидок, бонусов, консультаций,
+                            возможность дистанционного обслуживания и&nbsp;т.д. Эти факторы могут быть определяющими при
+                            выборе компании.
+                        </p>
+                        <p class="text">
+                            Наша компания уделяет особое внимание индивидуальному подходу к&nbsp;каждому клиенту,
+                            стремится предоставлять качественные услуги и&nbsp;следовать всем современным требованиям.
+                            Мы&nbsp;также предлагаем удобный сервис и&nbsp;дополнительные преимущества для наших
+                            клиентов. Вы&nbsp;можете быть уверены, что сотрудничество с&nbsp;нашей компанией будет
+                            выгодным и&nbsp;приятным для вас.
+                        </p>
+                    </div>
+                    <h3>
+                        <span class="faq__subtitle">Могу ли я делегировать вам работу / согласование
+                            с подрядчиком /
+                            организацией?</span>
+                    </h3>
+                    <div>
+                        <p class="faq__text text">
+                            Конечно, мы готовы помочь вам в делегировании работы, согласовании с подрядчиками или
+                            организации. Наша компания специализируется на предоставлении услуг по управлению проектами,
+                            и мы имеем богатый опыт работы в данной области.Мы понимаем, что управление проектами может
+                            быть трудоемкой задачей, особенно если вы заняты другими делами. Поэтому мы готовы
+                            предложить вам свои услуги по управлению проектами, чтобы вы могли сосредоточиться на своих
+                            основных задачах. Мы готовы взять на себя все аспекты управления проектами, включая
+                            согласование с подрядчиками, организацию работы и контроль за выполнением задач. Мы также
+                            обеспечим постоянную связь с вами, чтобы вы всегда были в курсе процесса выполнения проекта.
+                        </p>
+                        <p class="text">
+                            Если вы хотите доверить управление своим проектом профессионалам, которые могут обеспечить
+                            эффективное выполнение задач, то наша компания - именно то, что вам нужно. Мы готовы
+                            предложить вам качественные услуги по управлению проектами, которые помогут вам достичь
+                            ваших целей и получить максимальную выгоду от вашего проекта.
+                        </p>
+                    </div>
+                    <h3>
+                        <span class="faq__subtitle">Могу ли я вернуть деньги на каком-либо из этапов
+                            работ?</span>
+                    </h3>
+                    <div>
+                        <p class="faq__text text">
+                            Вопрос о&nbsp;возврате денег на&nbsp;любом этапе работ возникает достаточно часто, особенно
+                            при заказе услуг у&nbsp;компаний или фрилансеров. Но&nbsp;все зависит от&nbsp;условий,
+                            которые были оговорены заранее. Если вы&nbsp;заказали услугу и&nbsp;уже заплатили
+                            за&nbsp;ее&nbsp;выполнение, но&nbsp;в&nbsp;процессе работы возникли проблемы, то&nbsp;первым
+                            делом стоит обратиться к&nbsp;исполнителю. Возможно, ему будет достаточно предоставить
+                            дополнительные материалы или объяснить, что именно вас не&nbsp;устраивает, чтобы
+                            он&nbsp;смог улучшить работу.
+                        </p>
+                        <p class="text">
+                            Однако, если исполнитель не&nbsp;может исправить ситуацию, и&nbsp;вы&nbsp;все еще хотите
+                            вернуть деньги, то&nbsp;необходимо обращаться к&nbsp;правилам, оговоренным в&nbsp;договоре
+                            или соглашении. Если в&nbsp;нем предусмотрены возможности возврата денег, то&nbsp;стоит
+                            ознакомиться с&nbsp;условиями и&nbsp;следовать&nbsp;им. В&nbsp;любом случае, стоит помнить,
+                            что возврат денег на&nbsp;каком-либо этапе работ может быть сложным и&nbsp;затяжным
+                            процессом, поэтому лучше заранее уточнить условия и&nbsp;обсудить все нюансы.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -310,35 +390,37 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__block">
-                <img class="footer__logo" src="../img/footer/logo.svg" alt="">
+                <a href="#">
+                    <img class="footer__logo" src="../img/footer/logo.svg" alt="Логотип">
+                </a>
                 <nav class="footer__nav">
                     <ul class="footer__nav-list">
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">О нас</a>
+                            <a class="footer__nav-link" href="#">О нас</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">Проекты</a>
+                            <a class="footer__nav-link" href="#">Проекты</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">Отзывы</a>
+                            <a class="footer__nav-link" href="#">Отзывы</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">Договор оферты</a>
+                            <a class="footer__nav-link" href="#">Договор оферты</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">Договор подряда</a>
+                            <a class="footer__nav-link" href="#">Договор подряда</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">Конфиденциальность</a>
+                            <a class="footer__nav-link" href="#">Конфиденциальность</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a class="footer__nav-link" href="http://">Партнёрское соглашение</a>
+                            <a class="footer__nav-link" href="#">Партнёрское соглашение</a>
                         </li>
                     </ul>
                 </nav>
                 <ul class="footer__social">
                     <li class="footer__social-item">
-                        <a href="https://www.ok.ru/" target="_blank">
+                        <a href="https://www.ok.ru/" target="_blank" aria-label="Социальная сеть одноклассники">
                             <svg class="footer__social-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -351,7 +433,7 @@
                         </a>
                     </li>
                     <li class="footer__social-item">
-                        <a href="https://www.vk.com/" target="_blank">
+                        <a href="https://www.vk.com/" target="_blank" aria-label="Социальная сеть ВК">
                             <svg class="footer__social-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -363,13 +445,26 @@
                 </ul>
             </div>
             <div class="footer__block">
-                <h3 class=" footer__form-title title">Оставить заявку</h3>
+                <!-- <h3 class=" footer__form-title title">Оставить заявку</h3>
                 <form class="footer__form" action="#">
                     <input class="footer__form-text text" type="text" placeholder="Фамилия, имя и отчество*"><br>
                     <input class="footer__form-text text" type="email" placeholder="Email*"><br>
                     <textarea class="footer__form-text-area text" placeholder="Сообщение"></textarea><br>
                     <button class="footer__button button" type="submit">Отправить данные</button>
+                </form> -->
+
+                <h3 class="footer__form-title title" id="form-heading">Оставить заявку</h3>
+                <form class="footer__form" role="form" aria-labelledby="form-heading" action="#">
+                    <input class="footer__form-text text" type="text" id="fullname" name="fullname"
+                        placeholder="Фамилия, имя и отчество*" aria-label="Фамилия, имя и отчество"
+                        aria-required="true"><br>
+                    <input class="footer__form-text text" type="email" id="email" name="email" placeholder="Email*"
+                        aria-label="Email" aria-required="true"><br>
+                    <textarea class="footer__form-text-area text" id="message" name="message" placeholder="Сообщение"
+                        aria-label="Сообщение"></textarea><br>
+                    <button class="footer__button button" type="submit">Отправить данные</button>
                 </form>
+
             </div>
             <div class="footer__block">
                 <p class="footer__text">
@@ -382,10 +477,14 @@
             </div>
         </div>
     </footer>
+
     <script src="js/step.js"></script>
     <script src="js/burger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 
 </html>

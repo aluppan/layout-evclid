@@ -3,11 +3,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     allowTouchMove: true,
     effect: 'fade',
-    speed: 1500,
-
-    // touchEventsTarget: 'container',
-    // touchRatio: 1,
-    // touchAngle: 45,
+    speed: 1000,
 
     pagination: {
         el: '.swiper-pagination',
