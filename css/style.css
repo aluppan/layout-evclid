@@ -349,7 +349,6 @@ p {
   height: 24px;
   width: 24px;
   margin-left: 260px;
-  overflow: hidden;
   transition: height 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), border-radius 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 @media (max-width: 1366px) {
@@ -368,7 +367,25 @@ p {
   background: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
   border-radius: 24px;
-  margin-left: 85px;
+  margin-left: 25px;
+}
+@media (max-width: 1366px) {
+  .header__search.active {
+    width: 300px;
+    height: 48px;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .header__search.active {
+    width: 250px;
+  }
+}
+@media (max-width: 320px) {
+  .header__search.active {
+    width: 220px;
+    height: 43px;
+  }
 }
 .header__search input {
   height: 100%;
@@ -377,9 +394,23 @@ p {
   background: #fff;
   outline: none;
   font-size: 18px;
+  display: none;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   padding: 16px 0 16px 32px;
-  width: 300px;
+}
+.header__search input.active {
+  display: inline-block;
+}
+@media (max-width: 1366px) {
+  .header__search input {
+    padding: 16px 0 16px 16px;
+  }
+}
+@media (max-width: 320px) {
+  .header__search input {
+    width: 228px;
+    padding: 12px 0 12px 12px;
+  }
 }
 .header__search input::-moz-placeholder {
   font-weight: 500;
@@ -401,6 +432,18 @@ p {
   border-bottom: 1px solid #CACACA;
   width: 300px;
 }
+@media (max-width: 1366px) {
+  .header__search input::-moz-placeholder {
+    width: 140px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .header__search input::placeholder {
+    width: 140px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 .header__search .header__search-btn {
   position: absolute;
   right: 0px;
@@ -416,6 +459,11 @@ p {
   right: 57px;
   transform: translateY(-50%) rotate(360deg);
 }
+@media (max-width: 1366px) {
+  .header__search .header__search-btn.active {
+    right: 43px;
+  }
+}
 .header__search .header__cancel-btn {
   position: absolute;
   width: 24px;
@@ -430,6 +478,11 @@ p {
   right: 13px;
   opacity: 1;
   transform: translateY(-50%) rotate(360deg);
+}
+@media (max-width: 1366px) {
+  .header__search .header__cancel-btn.active {
+    right: 8px;
+  }
 }
 .header__search-icon rect, .header__search-icon path {
   transition: fill 0.1s ease-in-out;
