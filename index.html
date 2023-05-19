@@ -60,9 +60,6 @@
             </nav>
 
             <div class="header__search">
-                <!-- <div class="header__input">
-                    <input type="text" placeholder="Что будем искать?" class="header__input-text">
-                </div> -->
                 <input type="text" placeholder="Что будем искать?">
                 <div class="header__search-btn">
                     <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -85,65 +82,6 @@
                     </svg>
                 </div>
             </div>
-
-            <!-- <div class="search-box">
-                <input type="text" placeholder="Что будем искать?">
-                <div class="search-icon">
-                    <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect width="7.56126" height="1.89031"
-                            transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
-                        <path
-                            d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-                            stroke="black" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="cancel-icon">
-                    <svg class="header__clear-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect x="8.9541" y="7.30444" width="11.6645" height="2.33291"
-                            transform="rotate(45 8.9541 7.30444)" fill="#CACACA" />
-                        <rect x="7.30469" y="15.5525" width="11.6645" height="2.33291"
-                            transform="rotate(-45 7.30469 15.5525)" fill="#CACACA" />
-                        <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2" />
-                    </svg>
-                </div>
-            </div> -->
-
-            <!-- <button class="header__search">
-                <div class="header__input">
-                    <input type="text" placeholder="Что будем искать?" class="header__input-text" id="site-search">
-                </div>
-                <div class="header__search-open">
-                    <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect width="7.56126" height="1.89031"
-                            transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
-                        <path
-                            d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-                            stroke="black" stroke-width="2" />
-                    </svg>
-                </div>
-                <svg class="header__clear-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="8.9541" y="7.30444" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30444)"
-                        fill="#CACACA" />
-                    <rect x="7.30469" y="15.5525" width="11.6645" height="2.33291"
-                        transform="rotate(-45 7.30469 15.5525)" fill="#CACACA" />
-                    <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2" />
-                </svg>
-            </button> -->
-
-            <!-- <button class="header__search" aria-label="Найти">
-                <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="7.56126" height="1.89031"
-                        transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
-                    <path
-                        d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-                        stroke="black" stroke-width="2" />
-                </svg>
-            </button> -->
         </div>
     </header>
 
@@ -521,23 +459,15 @@
                 </ul>
             </div>
             <div class="footer__block">
-                <!-- <h3 class=" footer__form-title title">Оставить заявку</h3>
-                <form class="footer__form" action="#">
-                    <input class="footer__form-text text" type="text" placeholder="Фамилия, имя и отчество*"><br>
-                    <input class="footer__form-text text" type="email" placeholder="Email*"><br>
-                    <textarea class="footer__form-text-area text" placeholder="Сообщение"></textarea><br>
-                    <button class="footer__button button" type="submit">Отправить данные</button>
-                </form> -->
-
                 <h3 class="footer__form-title title" id="form-heading">Оставить заявку</h3>
                 <form class="footer__form" role="form" aria-labelledby="form-heading" action="#">
                     <input class="footer__form-text text" type="text" id="fullname" name="fullname"
                         placeholder="Фамилия, имя и отчество*" aria-label="Фамилия, имя и отчество"
-                        aria-required="true"><br>
+                        aria-required="true">
                     <input class="footer__form-text text" type="email" id="email" name="email" placeholder="Email*"
-                        aria-label="Email" aria-required="true"><br>
+                        aria-label="Email" aria-required="true">
                     <textarea class="footer__form-text-area text" id="message" name="message" placeholder="Сообщение"
-                        aria-label="Сообщение"></textarea><br>
+                        aria-label="Сообщение"></textarea>
                     <button class="footer__button button" type="submit">Отправить данные</button>
                 </form>
 
